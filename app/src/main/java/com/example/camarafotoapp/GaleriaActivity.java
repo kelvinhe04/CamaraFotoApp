@@ -4,6 +4,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -57,6 +58,7 @@ public class GaleriaActivity extends AppCompatActivity {
                 }
             }
             fotosGuardadas.clear();
+            Toast.makeText(this, "Todas las fotos han sido borradas", Toast.LENGTH_SHORT).show();
             galeriaAdapter.notifyDataSetChanged();
         }
     }

@@ -18,7 +18,7 @@
             android:text="Cámara de Fotos"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="20dp"
             android:textColor="#333" />
 
         <ImageView

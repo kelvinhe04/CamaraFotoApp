@@ -108,7 +108,16 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             copiarArchivo(tempFoto, destino);
+            // Limpiar el ImageView
+            imageView.setImageDrawable(null);
+
+            // Eliminar el archivo temporal
+            if (tempFoto.exists()) {
+                tempFoto.delete();
+            }
+
             Toast.makeText(this, "Imagen guardada", Toast.LENGTH_SHORT).show();
+
         } catch (IOException e) {
             Toast.makeText(this, "Error al guardar imagen", Toast.LENGTH_SHORT).show();
         }
