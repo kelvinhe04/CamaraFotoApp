@@ -1,22 +1,55 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="30dp"
+    android:background="#FAFAFA">
 
-    <Button
-        android:id="@+id/btnTomarFoto"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tomar Foto"
-        android:layout_marginTop="40dp"/>
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:spacing="12dp">
 
-    <ImageView
-        android:id="@+id/imgPreview"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="16dp"
-        android:scaleType="centerCrop"
-        android:contentDescription="Vista previa" />
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cámara de Fotos"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:textColor="#333" />
+
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"
+            android:background="#DDDDDD"
+            android:contentDescription="Vista previa de la foto" />
+
+        <Button
+            android:id="@+id/btnTomarFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📸 Tomar Foto"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnGuardarFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💾 Guardar Foto"
+            android:enabled="false"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnVerGaleria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🖼️ Ver Galería" />
+
+    </LinearLayout>
+</ScrollView>
